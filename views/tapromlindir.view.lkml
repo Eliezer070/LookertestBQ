@@ -1,34 +1,42 @@
 view: tapromlindir {
   sql_table_name: `indice_felicidad.tapromlindir` ;;
 
-  dimension: fcnombrejefe {
+  dimension: nombre {
     type: string
     sql: ${TABLE}.fcnombrejefe ;;
   }
-  dimension: fcnumeroempleadojefe {
+  dimension: numero_empleado {
     type: number
     sql: ${TABLE}.fcnumeroempleadojefe ;;
   }
-  dimension: fiidperiodo {
+  dimension: id_periodo {
     type: number
     sql: ${TABLE}.fiidperiodo ;;
   }
-  dimension: fiidpregunta {
+  dimension: id_pregunta {
     type: number
     sql: ${TABLE}.fiidpregunta ;;
   }
-  dimension: fipromediogeneral {
+  dimension: promedio_general {
     type: number
     sql: ${TABLE}.fipromediogeneral ;;
   }
-  dimension: fipromediorespuesta {
+  dimension: promedio_pregunta {
     type: number
     sql: ${TABLE}.fipromediorespuesta ;;
   }
-  dimension: fipromediorubro {
+  dimension: promedio_rubro {
     type: number
     sql: ${TABLE}.fipromediorubro ;;
   }
+  dimension: asignadas {
+    type:  number
+    sql: ${TABLE}.fiasignadas ;;
+  }
+  dimension: contestadas {
+    type:  number
+    sql: ${TABLE}.ficontestadas ;;
+}
   measure: count {
     type: count
   }

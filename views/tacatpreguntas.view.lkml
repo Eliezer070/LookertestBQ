@@ -1,22 +1,23 @@
 view: tacatpreguntas {
   sql_table_name: `indice_felicidad.tacatpreguntas` ;;
 
-  dimension: fcpregunta {
+  dimension: pregunta {
     type: string
     sql: ${TABLE}.fcpregunta ;;
   }
-  dimension: fiestatus {
+  dimension: status {
     type: yesno
     sql: ${TABLE}.fiestatus ;;
   }
-  dimension: fiidpregunta {
+  dimension: id_pregunta {
     type: number
     sql: ${TABLE}.fiidpregunta ;;
   }
-  dimension: fiidrubro {
+  dimension: id_rubro {
     type: number
     sql: ${TABLE}.fiidrubro ;;
   }
+
   measure: count {
     type: count
   }

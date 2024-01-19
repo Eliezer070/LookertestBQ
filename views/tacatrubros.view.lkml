@@ -1,19 +1,19 @@
 view: tacatrubros {
   sql_table_name: `indice_felicidad.tacatrubros` ;;
 
-  dimension: fctexto {
+  dimension: rubro {
     type: string
     sql: ${TABLE}.fctexto ;;
   }
-  dimension: fiestatus {
+  dimension: status {
     type: yesno
     sql: ${TABLE}.fiestatus ;;
   }
-  dimension: fiidrubro {
+  dimension: id_rubro {
     type: number
     sql: ${TABLE}.fiidrubro ;;
   }
-  dimension: fiposicion {
+  dimension: posision {
     type: number
     sql: ${TABLE}.fiposicion ;;
   }

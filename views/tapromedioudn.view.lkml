@@ -1,33 +1,41 @@
 view: tapromedioudn {
   sql_table_name: `indice_felicidad.tapromedioudn` ;;
 
-  dimension: fcudn {
+  dimension: nombre_udn{
     type: string
     sql: ${TABLE}.fcudn ;;
   }
-  dimension: fiidperiodo {
+  dimension: id_periodo {
     type: number
     sql: ${TABLE}.fiidperiodo ;;
   }
-  dimension: fiidpregunta {
+  dimension: id_pregunta {
     type: number
     sql: ${TABLE}.fiidpregunta ;;
   }
-  dimension: fiidudn {
+  dimension: id_udn {
     type: number
     sql: ${TABLE}.fiidudn ;;
   }
-  dimension: fipromediogeneral {
+  dimension: promedio_general {
     type: number
     sql: ${TABLE}.fipromediogeneral ;;
   }
-  dimension: fipromediorespuesta {
+  dimension: promedio_pregunta {
     type: number
     sql: ${TABLE}.fipromediorespuesta ;;
   }
-  dimension: fipromediorubro {
+  dimension: promedio_rubro {
     type: number
     sql: ${TABLE}.fipromediorubro ;;
+  }
+  dimension: asignadas {
+    type:  number
+    sql: ${TABLE}.fiasignadas ;;
+  }
+  dimension: contestadas {
+    type:  number
+    sql: ${TABLE}.ficontestadas ;;
   }
   measure: count {
     type: count
