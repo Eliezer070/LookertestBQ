@@ -128,20 +128,20 @@ explore: tapromedioequipo {
   }
   }
 
-explore: tacatrubros {
-  label: "Rubros"
-}
+#explore: tacatrubros {
+#  label: "Rubros"
+#}
 
-explore: tacatpreguntas {
-  label: "Preguntas"
-  view_label: "Preguntas"
-  join: tacatrubros {
-    view_label: "Rubros"
-    type: left_outer
-    relationship: one_to_many
-    sql_on: ${tacatpreguntas.id_rubro} = ${tacatrubros.id_rubro} ;;
-  }
-}
+#explore: tacatpreguntas {
+#  label: "Preguntas"
+#  view_label: "Preguntas"
+#  join: tacatrubros {
+#    view_label: "Rubros"
+#    type: left_outer
+#    relationship: one_to_many
+#    sql_on: ${tacatpreguntas.id_rubro} = ${tacatrubros.id_rubro} ;;
+#  }
+#}
 
 explore: tapromedioudn {
   label: "UDN"
@@ -259,8 +259,17 @@ explore: tapromlindir {
     sql_on: ${medicion_prom_pregunta.valor_maximo} > ${tapromlindir.promedio_general} AND ${medicion_prom_pregunta.valor_minimo} <= ${tapromlindir.promedio_general}   ;;
     sql_where: ${medicion_prom_pregunta.id_medicion_periodo}=${cat_Periodos.id_medicion_periodo} ;;
   }
+  join: tdpromlindir {
+    view_label: "Totales"
+    from: tdpromlindir
+    type: inner
+    relationship: many_to_one
+    sql_on: ${taempleados.numero_empleado} = ${tdpromlindir.fcnumeroempleadojefe} AND ${tdpromlindir.fiidperiodo} = ${tdpromlindir.fiidperiodo} ;;
+  }
+
 }
 
 explore: tacatperiodos {
   label: "Periodos"
+  hidden: yes
 }
