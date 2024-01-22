@@ -13,6 +13,7 @@ persist_with: indicefelicdad_bq_default_datagroup
 
 
 explore: tacatmedicion {
+  hidden: yes
   label: "Medición"
   view_label: "Medición"
   join: tacatperiodos{
