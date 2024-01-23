@@ -40,4 +40,8 @@ view: tapromlindir {
   measure: count {
     type: count
   }
+  measure: promedio_rubro_mesure {
+    type: max
+    sql: ${TABLE}.fipromediorubro ;;
+  }
 }
