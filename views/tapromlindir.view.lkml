@@ -17,15 +17,18 @@ view: tapromlindir {
     type: number
     sql: ${TABLE}.fiidpregunta ;;
   }
-  dimension: promedio_general {
+  dimension: promedio_general_h {
+    hidden: yes
     type: number
     sql: ${TABLE}.fipromediogeneral ;;
   }
-  dimension: promedio_pregunta {
+  dimension: promedio_pregunta_h {
+    hidden: yes
     type: number
     sql: ${TABLE}.fipromediorespuesta ;;
   }
-  dimension: promedio_rubro {
+  dimension: promedio_rubro_h {
+    hidden: yes
     type: number
     sql: ${TABLE}.fipromediorubro ;;
   }
@@ -40,8 +43,16 @@ view: tapromlindir {
   measure: count {
     type: count
   }
-  measure: promedio_rubro_mesure {
+  measure: promedio_rubro {
     type: max
     sql: ${TABLE}.fipromediorubro ;;
+  }
+  measure: promedio_general {
+    type: max
+    sql: ${TABLE}.fipromediogeneral ;;
+  }
+  measure: promedio_pregunta {
+    type: max
+    sql: ${TABLE}.fipromediorespuesta ;;
   }
 }

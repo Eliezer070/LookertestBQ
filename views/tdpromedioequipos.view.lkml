@@ -42,6 +42,7 @@ view: tdpromedioequipos {
     hidden: yes
   }
 
+
   set: detail {
     fields: [
         columna,

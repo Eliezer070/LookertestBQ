@@ -44,7 +44,7 @@ explore: taempleados{
     from: tacatmedicion
     type: inner
     relationship: many_to_one
-    sql_on: ${medicion_lideres_prom_general.valor_maximo} > ${tapromedioequipo_lideres.promedio_general} AND ${medicion_lideres_prom_general.valor_minimo} <= ${tapromedioequipo_lideres.promedio_general}   ;;
+    sql_on: ${medicion_lideres_prom_general.valor_maximo} > ${tapromedioequipo_lideres.promedio_general_h} AND ${medicion_lideres_prom_general.valor_minimo} <= ${tapromedioequipo_lideres.promedio_general_h}   ;;
     sql_where: ${medicion_lideres_prom_general.id_medicion_periodo}=${tacatperiodos.id_medicion_periodo} ;;
   }
 
@@ -101,7 +101,7 @@ explore: tapromedioequipo {
     from: tacatmedicion
     type: inner
     relationship: many_to_one
-    sql_on: ${medicion_prom_general.valor_maximo} > ${tapromedioequipo.promedio_general} AND ${medicion_prom_general.valor_minimo} <= ${tapromedioequipo.promedio_general}   ;;
+    sql_on: ${medicion_prom_general.valor_maximo} > ${tapromedioequipo.promedio_general_h} AND ${medicion_prom_general.valor_minimo} <= ${tapromedioequipo.promedio_general_h}   ;;
     sql_where: ${medicion_prom_general.id_medicion_periodo}=${cat_Periodos.id_medicion_periodo} ;;
   }
   join: medicion_prom_rubro {
@@ -109,7 +109,7 @@ explore: tapromedioequipo {
     from: tacatmedicion
     type: inner
     relationship: many_to_one
-    sql_on: ${medicion_prom_rubro.valor_maximo} > ${tapromedioequipo.promedio_general} AND ${medicion_prom_rubro.valor_minimo} <= ${tapromedioequipo.promedio_general}   ;;
+    sql_on: ${medicion_prom_rubro.valor_maximo} > ${tapromedioequipo.promedio_general_h} AND ${medicion_prom_rubro.valor_minimo} <= ${tapromedioequipo.promedio_general_h}   ;;
     sql_where: ${medicion_prom_rubro.id_medicion_periodo}=${cat_Periodos.id_medicion_periodo} ;;
   }
   join: medicion_prom_pregunta {
@@ -117,7 +117,7 @@ explore: tapromedioequipo {
     from: tacatmedicion
     type: inner
     relationship: many_to_one
-    sql_on: ${medicion_prom_pregunta.valor_maximo} > ${tapromedioequipo.promedio_general} AND ${medicion_prom_pregunta.valor_minimo} <= ${tapromedioequipo.promedio_general}   ;;
+    sql_on: ${medicion_prom_pregunta.valor_maximo} > ${tapromedioequipo.promedio_general_h} AND ${medicion_prom_pregunta.valor_minimo} <= ${tapromedioequipo.promedio_general_h}   ;;
     sql_where: ${medicion_prom_pregunta.id_medicion_periodo}=${cat_Periodos.id_medicion_periodo} ;;
     }
   join: tdpromedioequipos {
@@ -178,7 +178,7 @@ explore: tapromedioudn {
     from: tacatmedicion
     type: inner
     relationship: many_to_one
-    sql_on: ${medicion_prom_general.valor_maximo} > ${tapromedioudn.promedio_general} AND ${medicion_prom_general.valor_minimo} <= ${tapromedioudn.promedio_general}   ;;
+    sql_on: ${medicion_prom_general.valor_maximo} > ${tapromedioudn.promedio_general_h} AND ${medicion_prom_general.valor_minimo} <= ${tapromedioudn.promedio_general_h}   ;;
     sql_where: ${medicion_prom_general.id_medicion_periodo}=${cat_Periodos.id_medicion_periodo} ;;
   }
   join: medicion_prom_rubro {
@@ -186,7 +186,7 @@ explore: tapromedioudn {
     from: tacatmedicion
     type: inner
     relationship: many_to_one
-    sql_on: ${medicion_prom_rubro.valor_maximo} > ${tapromedioudn.promedio_general} AND ${medicion_prom_rubro.valor_minimo} <= ${tapromedioudn.promedio_general}   ;;
+    sql_on: ${medicion_prom_rubro.valor_maximo} > ${tapromedioudn.promedio_general_h} AND ${medicion_prom_rubro.valor_minimo} <= ${tapromedioudn.promedio_general_h}   ;;
     sql_where: ${medicion_prom_rubro.id_medicion_periodo}=${cat_Periodos.id_medicion_periodo} ;;
   }
   join: medicion_prom_pregunta {
@@ -194,7 +194,7 @@ explore: tapromedioudn {
     from: tacatmedicion
     type: inner
     relationship: many_to_one
-    sql_on: ${medicion_prom_pregunta.valor_maximo} > ${tapromedioudn.promedio_general} AND ${medicion_prom_pregunta.valor_minimo} <= ${tapromedioudn.promedio_general}   ;;
+    sql_on: ${medicion_prom_pregunta.valor_maximo} > ${tapromedioudn.promedio_general_h} AND ${medicion_prom_pregunta.valor_minimo} <= ${tapromedioudn.promedio_general_h}   ;;
     sql_where: ${medicion_prom_pregunta.id_medicion_periodo}=${cat_Periodos.id_medicion_periodo} ;;
   }
   join: tdpromedioudn
@@ -241,7 +241,7 @@ explore: tapromlindir {
     from: tacatmedicion
     type: inner
     relationship: many_to_one
-    sql_on: ${medicion_prom_general.valor_maximo} > ${tapromlindir.promedio_general} AND ${medicion_prom_general.valor_minimo} <= ${tapromlindir.promedio_general}   ;;
+    sql_on: ${medicion_prom_general.valor_maximo} > ${tapromlindir.promedio_general_h} AND ${medicion_prom_general.valor_minimo} <= ${tapromlindir.promedio_general_h}   ;;
     sql_where: ${medicion_prom_general.id_medicion_periodo}=${cat_Periodos.id_medicion_periodo} ;;
   }
   join: medicion_prom_rubro {
@@ -249,7 +249,7 @@ explore: tapromlindir {
     from: tacatmedicion
     type: inner
     relationship: many_to_one
-    sql_on: ${medicion_prom_rubro.valor_maximo} > ${tapromlindir.promedio_general} AND ${medicion_prom_rubro.valor_minimo} <= ${tapromlindir.promedio_general}   ;;
+    sql_on: ${medicion_prom_rubro.valor_maximo} > ${tapromlindir.promedio_general_h} AND ${medicion_prom_rubro.valor_minimo} <= ${tapromlindir.promedio_general_h}   ;;
     sql_where: ${medicion_prom_rubro.id_medicion_periodo}=${cat_Periodos.id_medicion_periodo} ;;
   }
   join: medicion_prom_pregunta {
@@ -257,7 +257,7 @@ explore: tapromlindir {
     from: tacatmedicion
     type: inner
     relationship: many_to_one
-    sql_on: ${medicion_prom_pregunta.valor_maximo} > ${tapromlindir.promedio_general} AND ${medicion_prom_pregunta.valor_minimo} <= ${tapromlindir.promedio_general}   ;;
+    sql_on: ${medicion_prom_pregunta.valor_maximo} > ${tapromlindir.promedio_general_h} AND ${medicion_prom_pregunta.valor_minimo} <= ${tapromlindir.promedio_general_h}   ;;
     sql_where: ${medicion_prom_pregunta.id_medicion_periodo}=${cat_Periodos.id_medicion_periodo} ;;
   }
   join: tdpromlindir {
