@@ -46,14 +46,17 @@ view: tapromedioequipo {
   measure: promedio_rubro {
     type: max
     sql: ${TABLE}.fipromediorubro ;;
+    value_format: "0.00"
   }
   measure: promedio_general {
     type: max
     sql: ${TABLE}.fipromediogeneral ;;
+    value_format: "0.00"
   }
   measure: promedio_pregunta {
     type: max
     sql: ${TABLE}.fipromediorespuesta ;;
+    value_format: "0.00"
   }
   measure: relacion_asignadas_contestadas {
     type: number
