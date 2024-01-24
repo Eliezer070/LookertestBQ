@@ -1,6 +1,7 @@
 view: tapromlindir {
   sql_table_name: `indice_felicidad.tapromlindir` ;;
 
+
   dimension: nombre {
     type: string
     sql: ${TABLE}.fcnombrejefe ;;
